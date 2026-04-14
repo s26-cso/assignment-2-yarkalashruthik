@@ -1,5 +1,6 @@
 .section .rodata
-fmt_int:   .string "%d " 
+fmt_int:   .string "%d"
+fmt_space: .string " " 
 fmt_nl:    .string "\n"
 .globl main
 .text
@@ -91,6 +92,10 @@ lw a1, 0(s2)
 jal ra,printf
 addi s2,s2,4
 addi s0,s0,1
+beq s0, s1, skip_space #to skip trailing space at the last print of value
+la a0, fmt_space
+jal ra, printf
+skip_space:
 beq x0,x0,print
 stackisempty:
 addi a4,x0,-1 #a4=-1
