@@ -13,7 +13,7 @@ sw t0,0(a0)
 sd x0,8(a0)  #pointer=NULL
 sd x0,16(a0) #pointer-NULL
 ret
-.globl insert_node
+.globl insert
 .text
 insert:
 #a0 contains root,a1 contains val,x1 return address
