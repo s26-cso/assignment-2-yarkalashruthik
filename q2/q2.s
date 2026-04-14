@@ -5,7 +5,7 @@ fmt_nl:    .string "\n"
 .globl main
 .text
 main:
-li t0, 1 t0=1 to check if arguement is atleast 1
+li t0, 1 #t0=1 to check if arguement is atleast 1
 beq a0, t0, end #exit if only 1 arguement ie ./a.out 
 addi sp,sp,-32 
 sd s0,0(sp)
