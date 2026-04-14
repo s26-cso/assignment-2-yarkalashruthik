@@ -15,7 +15,7 @@ sd x0,16(a0) #pointer-NULL
 ret
 .globl insert_node
 .text
-insert_node:
+insert:
 #a0 contains root,a1 contains val,x1 return address
 add a2,x0,a0 #a2=temp
 add a3,x0,x0 #a3=parent=NULL
